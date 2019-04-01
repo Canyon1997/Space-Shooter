@@ -176,3 +176,4 @@ d3bbd1f86b55a6168b664522b2cf57b3 Assembly-CSharp.dll:.DestroyByTime
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 1e0c678aee14d9f9f5e704311b5fb996 Assembly-CSharp.dll:.DestroyByContact
 96579b1d7c32aebb6c65db101ee7a10b Assembly-CSharp.dll:.Done_GameController
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Score

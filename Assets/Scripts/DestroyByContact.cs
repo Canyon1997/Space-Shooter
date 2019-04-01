@@ -10,8 +10,10 @@ public class DestroyByContact : MonoBehaviour
     {
         if (other.tag == "Boundary")
         {
+            
             return;
         }
+        Score.scoreValue += 10;
         Instantiate(explosion, transform.position, transform.rotation);
         if (other.tag == "Player")
         {
