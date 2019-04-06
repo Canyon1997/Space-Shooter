@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Canyon/Desktop/Davidson_Canyon_DIG3480_Tutorial3/Space Shooter2.exe
+C:/Users/Canyon/Desktop/Davidson_Canyon_DIG3480_Challenge3/Space Shooter2.exe
 SceneListBegin?
 Assets/Space Shooter.unity
 SceneListEnd?
@@ -171,9 +171,11 @@ d87a00c7a10bfacb889f2e1d042dc43a Assembly-CSharp.dll:.Done_PlayerController
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 be2d1663d6bc8ce39ce9c8dea6a963c7 Assembly-CSharp.dll:.Done_BGScroller
-04accb8f7a767f0e1575817e40b2fc3b Assembly-CSharp.dll:.GameController
+c330de24276f7b8ee4272e8d7890fac7 Assembly-CSharp.dll:.GameController
 d3bbd1f86b55a6168b664522b2cf57b3 Assembly-CSharp.dll:.DestroyByTime
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-1e0c678aee14d9f9f5e704311b5fb996 Assembly-CSharp.dll:.DestroyByContact
+3aeec2416520303994f9d66901c73317 Assembly-CSharp.dll:.DestroyByContact
 96579b1d7c32aebb6c65db101ee7a10b Assembly-CSharp.dll:.Done_GameController
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Score
+be2d1663d6bc8ce39ce9c8dea6a963c7 Assembly-CSharp.dll:.BGScroller
+de7d6a5820dded6c7f75780e98f1dc41 Assembly-CSharp.dll:.WeaponController
+ad0f81d6a9132f8730e66d2bf1bbd85b Assembly-CSharp.dll:.EvasiveManeuver
