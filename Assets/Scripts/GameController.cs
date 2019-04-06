@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour
 
         if (score >= 100)
         {
-            winText.text = "You win! Created by Canyon Davidson";
+            winText.text = "You win! Game created by Canyon Davidson";
             gameOver = true;
             restart = true;
         }
