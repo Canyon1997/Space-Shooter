@@ -15,6 +15,9 @@ public class BGScroller : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
+        GameObject points = GameObject.Find("GameController");
+        GameController gameController = points.GetComponent<GameController>();
+        
     }
 
     
@@ -22,6 +25,12 @@ public class BGScroller : MonoBehaviour
     {
         float newPosition = Mathf.Repeat (Time.time * scrollSpeed, tileSizeZ);
         transform.position = startPosition + Vector3.forward * newPosition;
+
+        if(GameController.score >=100)
+        {
+            newPosition = Mathf.Repeat(Time.time * -10, tileSizeZ);
+            transform.position = startPosition + Vector3.forward * newPosition;
+        }
         
     }
 }

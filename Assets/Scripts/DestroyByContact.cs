@@ -17,7 +17,7 @@ public class DestroyByContact : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
         if (gameController == null)
-        {
+        { 
             Debug.Log("Cannot find 'GameController' script");
         }
     }
@@ -43,12 +43,19 @@ public class DestroyByContact : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            gameController.GameOver();
+            GameController.lives -= 1;
+
+            if (GameController.lives <= 0)
+            {
+                Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                gameController.GameOver();
+                Destroy(other.gameObject);
+            }
+
         }
 
         gameController.AddScore(scoreValue);
-        Destroy(other.gameObject);
+        
         Destroy(gameObject);
     }
 }

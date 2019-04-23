@@ -15,14 +15,25 @@ public class GameController : MonoBehaviour
     public Text gameOverText;
     public Text restartText;
     public Text winText;
+    public Text livesText;
+
+
+
+    
+
+
+
+
 
     public Text ScoreText;
-    private int score;
+    public static int score;
+    public static int lives;
 
 
 
     private bool gameOver;
     private bool restart;
+    
 
 
 
@@ -39,22 +50,28 @@ public class GameController : MonoBehaviour
         gameOverText.text = "";
         restartText.text = "";
         winText.text = "";
+        lives = 3;
         score = 0;
         UpdateScore();
         
+
+
+
+
 
     }
 
     void Update()
     {
+        livesText.text = "Lives: " + lives;
 
         if (restart)
         {
-            if (Input.GetKeyDown (KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 SceneManager.LoadScene("Space Shooter");
             }
-            
+
         }
 
         if (score >= 100)
@@ -62,7 +79,18 @@ public class GameController : MonoBehaviour
             winText.text = "You win! Game created by Canyon Davidson";
             gameOver = true;
             restart = true;
+            
+
         }
+
+        if(lives <= 0)
+        {
+            gameOver = true;
+            restart = true;
+        }
+
+        if (Input.GetKey("escape"))
+            Application.Quit();
 
     }
 
@@ -73,7 +101,7 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
-                GameObject hazard = hazards[Random.Range (0,hazards.Length)];
+                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(hazard, spawnPosition, spawnRotation);
@@ -102,10 +130,12 @@ public class GameController : MonoBehaviour
         ScoreText.text = "Points: " + score;
     }
 
+    
+
     public void GameOver()
     {
-        gameOverText.text = "Game Over!";
-        gameOver = true;
+            gameOverText.text = "Game Over!";
+            gameOver = true;  
     }
 
    
